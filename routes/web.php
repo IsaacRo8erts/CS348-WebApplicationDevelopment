@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/ball', function () {
     return "Ball is cool!";
 });
+
+Route::get('/goat', function () {
+    return "Lebron is the GOAT";
+});
