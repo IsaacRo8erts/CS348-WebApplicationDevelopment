@@ -12,10 +12,13 @@ class ProfileTableSeeder extends Seeder
      *
      * @return void
      */
+    use App\Models\Profile;
+
     public function run()
     {
-        //
-        factory(App\Models\Profile::class, 50)->create();
+        
+        //factory(App\Models\Profile::class, 50)->create();
+        $profile = Profile::factory()->count(50)->make();
 
     }
 }
