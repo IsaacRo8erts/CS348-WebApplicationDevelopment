@@ -22,15 +22,15 @@ class ProfileFactory extends Factory
     public function definition()
     {
         return [
-            'pNum' => $faker->randomInteger(),
-            'firstName' => $faker->firstName(),
-            'surname' => $faker->surname(),
-            'age' => $faker->numberBetween(0,100),
-            'favouriteTeam' => $faker->randomElement(['Lakers','Warrios','Celtics',
+            'pNum' => $this->faker->randomDigit(),
+            'firstName' => $this->faker->firstName(),
+            'surname' => $this->faker->lastName(),
+            'age' => $this->faker->numberBetween(0,100),
+            'favouriteTeam' => $this->faker->randomElement(['Lakers','Warrios','Celtics',
             'Heat','Raptors','Rockets','Bulls', 'Clippers', '76ers', 'Knicks', 'Bucks',
             'Mavericks', 'Spurs', 'Thunder', 'Nets', 'Suns', 'Blazers', 'Nuggets', 'Cavs',
             'Jazz', 'Pelicans', 'Wolves', 'Pacers', 'Magic', 'Kings', 'Pistons']),
-            'email',
+            'email' => $this->faker->uniqueEmail(),
         ];
     }
 }

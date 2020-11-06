@@ -12,7 +12,7 @@ class ProfileTableSeeder extends Seeder
      *
      * @return void
      */
-    use App\Models\Profile;
+    
 
     public function run()
     {
