@@ -23,6 +23,7 @@ class ProfileTableSeeder extends Seeder
         $p1->age = 25;
         $p1->favouriteTeam = "Bulls";
         $p1->email = "matt.thomas@gmail.com";
+        $p1->save();
 
     }
 }
