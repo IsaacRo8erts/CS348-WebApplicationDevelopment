@@ -12,6 +12,11 @@ class Post extends Model
     public function profile()
     {
         return $this->belongsTo('App\Models\Profile');
-        return $this->hasOne('App\Models\Profile');
+
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
     }
 }
