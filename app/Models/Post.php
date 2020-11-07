@@ -9,8 +9,8 @@ class Post extends Model
 {
     use HasFactory;
 
-    public function profiles()
+    public function profile()
     {
-        return $this->hasMany('App\Post');
+        return $this->belongsTo('App\Profile');
     }
 }

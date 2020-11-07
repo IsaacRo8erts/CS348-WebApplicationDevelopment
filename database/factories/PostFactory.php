@@ -22,7 +22,6 @@ class PostFactory extends Factory
     public function definition()
     {
         return [
-            'profileNum' => $this->faker->randomDigit(),
             'title' => $this->faker->domainWord(),
             'profile_id'=>1,
         ];

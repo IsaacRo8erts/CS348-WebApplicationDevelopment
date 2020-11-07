@@ -11,7 +11,6 @@ class Profile extends Model
 
     public function posts()
     {
-        return $this->belongsTo('App\Models\Post');
-        
+        return $this->hasMany('App\Post');
     }
 }
