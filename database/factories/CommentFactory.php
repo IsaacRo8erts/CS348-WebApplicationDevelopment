@@ -22,7 +22,7 @@ class CommentFactory extends Factory
     public function definition()
     {
         return [
-            'comment' => $this->faker->realText(255),
+            'comment' => $this->faker->realText(),
             'post_id'=>1,
         ];
     }
