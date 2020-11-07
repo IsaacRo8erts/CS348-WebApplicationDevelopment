@@ -23,10 +23,7 @@ class CreateProfilesTable extends Migration
             $table->string('email');
             $table->timestamps();
 
-            $table->bigInteger('post_id')->unsigned();
-
-            $table->foreign('post_id')->references('id')->on('posts')
-                ->onDelete('cascade')->onUpdate('cascade');
+            
         });
     }
 
