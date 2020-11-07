@@ -22,7 +22,6 @@ class ProfileFactory extends Factory
     public function definition()
     {
         return [
-            'pNum' => $this->faker->randomDigit(),
             'firstName' => $this->faker->firstName(),
             'surname' => $this->faker->lastName(),
             'age' => $this->faker->numberBetween(0,100),
