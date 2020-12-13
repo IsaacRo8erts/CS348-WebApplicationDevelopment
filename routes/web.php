@@ -24,3 +24,7 @@ Route::get('/homepage', function () {
 Route::get('/forum', function () {
     return "Post goes here";
 });
+
+Route::get('/profiles', function () {
+    return "Profile goes here";
+});
