@@ -9,6 +9,11 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'profile_id',
+        'title',
+    ];
+
     public function profile()
     {
         return $this->belongsTo('App\Models\Profile');

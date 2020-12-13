@@ -30,7 +30,6 @@ class ProfileFactory extends Factory
             'Mavericks', 'Spurs', 'Thunder', 'Nets', 'Suns', 'Blazers', 'Nuggets', 'Cavs',
             'Jazz', 'Pelicans', 'Wolves', 'Pacers', 'Magic', 'Kings', 'Pistons']),
             'email' => $this->faker->unique()->safeEmail(),
-            'email_verified_at' => now(),
         ];
     }
 }

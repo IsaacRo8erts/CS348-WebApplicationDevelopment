@@ -9,6 +9,12 @@ class Comment extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'profile_id',
+        'post_id',
+        'comment',
+    ];
+
     public function profile()
     {
         return $this->belongsTo('App\Models\Profile');

@@ -9,10 +9,22 @@ class Profile extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'firstName',
+        'surname',
+        'age',
+        'favouriteTeam',
+        'email'
+    ];
+
     public function posts()
     {
         return $this->hasMany('App\Models\Post');
-        return $this->hasMany('App\Models\Comment');
        
+    }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
     }
 }
