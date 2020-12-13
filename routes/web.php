@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,5 @@ Route::get('/forum', function () {
     return "Post goes here";
 });
 
-Route::get('/profiles', 'ProfileController@index');
+Route::get('/profiles', [ProfileController::class, 'index']);
 

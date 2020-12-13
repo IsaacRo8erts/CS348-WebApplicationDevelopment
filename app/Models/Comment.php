@@ -9,8 +9,15 @@ class Comment extends Model
 {
     use HasFactory;
 
+    public function profile()
+    {
+        return $this->belongsTo('App\Models\Profile');
+
+    }
+
     public function post() 
     {
         return $this->belongsTo('App\Models\Post');
+        
     }
 }

@@ -12,6 +12,7 @@ class Profile extends Model
     public function posts()
     {
         return $this->hasMany('App\Models\Post');
+        return $this->hasMany('App\Models\Comment');
        
     }
 }
