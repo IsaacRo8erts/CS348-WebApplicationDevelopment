@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ball', function () {
-    return "Ball is cool!";
+Route::get('/homepage', function () {
+    return "Homepage goes here";
 });
 
-Route::get('/goat', function () {
-    return "Lebron is the GOAT";
+Route::get('/forum', function () {
+    return "Post goes here";
 });
