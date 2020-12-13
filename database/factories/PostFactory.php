@@ -23,7 +23,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => $this->faker->realText(30),
-            'profile_id'=>1,
+            'profile_id'=>Profile::all()->random()->id,
         ];
     }
 }

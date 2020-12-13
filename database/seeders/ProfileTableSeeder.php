@@ -16,7 +16,7 @@ class ProfileTableSeeder extends Seeder
 
     public function run()
     {
-
+        
         $profile = Profile::factory()->count(10)->create();
 
     }

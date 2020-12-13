@@ -23,7 +23,8 @@ class CommentFactory extends Factory
     {
         return [
             'comment' => $this->faker->realText(),
-            'post_id'=>1,
+            'profile_id'=> User::all()->random()->id,
+            'post_id'=> Post::all()->random()->id,
         ];
     }
 }
