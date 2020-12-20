@@ -7,6 +7,6 @@
     <title>Main Menu</title>
 </head>
 <body>
-    <a href="/menu">Basketball Forum</a>
+    <h1>Main Menu</h1>
 </body>
 </html>

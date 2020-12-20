@@ -18,13 +18,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/homepage', function () {
-    return "Homepage goes here";
-});
+Route::get('menu', 'App\Http\Controllers\MenuController@index');
+
+Route::get('profiles', 'App\Http\Controllers\ProfileController@index');
 
 Route::get('/forum', function () {
     return "Post goes here";
 });
-
-Route::get('/profiles', [ProfileController::class, 'index']);
-
