@@ -5,7 +5,7 @@
         <title>Basketball Forum - @yield('title')</title>
 </head>
 <body>
-    <h1>Baskebtall Forum - @yield('title')</h1>
+    <h1>Basketball Forum - @yield('title')</h1>
 
     
     <div>
