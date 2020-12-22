@@ -3,11 +3,10 @@
 @section('title', 'Profiles')
 
 @section('content')
-    <p>Basketball Forum Profiles:</p>
+    <p>A list of the Basketball Forum members:</p>
     <ul>
-    <p>Name:</p>
         @foreach ($profiles as $profile)
-            <li>{{ $profile->firstName }} {{ $profile->surname }}</li>
+            <li><a href="{{ route('profiles.show', ['id' => $profile->id]) }}">{{ $profile->firstName }} {{ $profile->surname }}</a></li>
         @endforeach
     </ul>
 @endsection

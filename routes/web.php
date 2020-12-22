@@ -22,6 +22,8 @@ Route::get('menu', 'App\Http\Controllers\MenuController@index');
 
 Route::get('profiles', 'App\Http\Controllers\ProfileController@index');
 
+Route::get('profiles/{id}', 'App\Http\Controllers\ProfileController@show');
+
 Route::get('/forum', function () {
     return "Post goes here";
 });
