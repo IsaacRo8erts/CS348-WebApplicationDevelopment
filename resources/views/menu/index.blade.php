@@ -8,8 +8,8 @@
 </head>
 <body>
     <h1>Main Menu</h1>
-    <h2>Profiles</h2>
-    <h3>Posts</h3>
+    <h1>Profiles</h1>
+    <h1>Posts</h1>
     
 </body>
 </html>

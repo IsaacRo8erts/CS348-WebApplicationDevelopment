@@ -8,7 +8,6 @@
     <p>Name:</p>
         @foreach ($profiles as $profile)
             <li>{{ $profile->firstName }} {{ $profile->surname }}</li>
-            <li>{{ $profile->age }}</li>
         @endforeach
     </ul>
 @endsection
