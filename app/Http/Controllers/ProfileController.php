@@ -14,9 +14,11 @@ class ProfileController extends Controller
      */
     public function index()
     {
+        //return view('profiles.index')->with('profiles', Profile::all());
         $profiles = Profile::all();
         return view('profiles.index', ['profiles' => $profiles]);
     }
+
 
     /**
      * Display the specified resource.
