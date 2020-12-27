@@ -24,6 +24,10 @@ Route::get('profiles', 'App\Http\Controllers\ProfileController@index');
 
 Route::get('profiles/{id}', 'App\Http\Controllers\ProfileController@show')->name('profiles.show');
 
+Route::get('posts', 'App\Http\Controllers\PostController@index');
+
+Route::get('posts/{id}', 'App\Http\Controllers\PostController@show')->name('posts.show');
+
 Route::get('/forum', function () {
     return "Post goes here";
 });
