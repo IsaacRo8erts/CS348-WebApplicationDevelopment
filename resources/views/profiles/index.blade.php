@@ -9,4 +9,5 @@
             <li><a href="{{ route('profiles.show', ['id' => $profile->id]) }}">{{ $profile->firstName }} {{ $profile->surname }}</a></li>
         @endforeach
     </ul>
+    <a href="{{ route('profiles.create' )}}">Create Profile</a>
 @endsection
