@@ -3,7 +3,7 @@
 @section('title', 'Create Profile')
 
 @section('content')
-    <form method="POST" action="{{ route{'profiles.store'} }}">
+    <form method="POST" action="{{ route('profiles.store') }}">
         @csrf
         <p>First name: <input type="text" name="firstName"></p>
         <p>Surame: <input type="text" name="surname"></p>

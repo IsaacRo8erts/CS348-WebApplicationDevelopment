@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('menu', 'App\Http\Controllers\MenuController@index');
 
-Route::get('profiles', 'App\Http\Controllers\ProfileController@index');
+Route::get('profiles', 'App\Http\Controllers\ProfileController@index')->name('profiles.index');
 Route::get('profiles/create', 'App\Http\Controllers\ProfileController@create')->name('profiles.create');
 Route::post('profiles', 'App\Http\Controllers\ProfileController@store')->name('profiles.store');
 Route::get('profiles/{id}', 'App\Http\Controllers\ProfileController@show')->name('profiles.show');
