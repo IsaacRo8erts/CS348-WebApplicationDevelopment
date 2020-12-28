@@ -12,6 +12,8 @@ class Post extends Model
     protected $fillable = [
         'profile_id',
         'title',
+        'content',
+        //'comment',
     ];
 
     public function profile()

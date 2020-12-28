@@ -17,7 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
-            //$table->bigInteger('profile_id')->unsigned();
+            $table->string('content');
 
             $table->foreignId('profile_id')->references('id')->on('profiles')
                 ->onDelete('cascade')->onUpdate('cascade');
