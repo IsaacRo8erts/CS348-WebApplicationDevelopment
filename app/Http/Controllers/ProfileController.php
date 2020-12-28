@@ -50,7 +50,15 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request['firstName']);
+        $validatedData = $request->validate([
+            'firstName' => 'required|max:30',
+            'surname' => 'required|max:30',
+            'age' => 'required|numeric',
+            'favouriteTeam' => 'required|50',
+            'email' => 'required|30',
+        ]);
+
+        return "Passed Validation";
     }
 
     
