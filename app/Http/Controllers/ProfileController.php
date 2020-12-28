@@ -53,12 +53,21 @@ class ProfileController extends Controller
         $validatedData = $request->validate([
             'firstName' => 'required|max:30',
             'surname' => 'required|max:30',
-            'age' => 'required|numeric',
-            'favouriteTeam' => 'required|50',
-            'email' => 'required|30',
+            'age' => 'required|integer',
+            'favouriteTeam' => 'required|max:50',
+            'email' => 'required|max:30',
         ]);
 
-        return "Passed Validation";
+        $p1 = new Profile;
+        $p1 -> firstName = $validatedData['firstName'];
+        $p1 -> surname = $validatedData['surname'];
+        $p1 -> age = $validatedData['age'];
+        $p1 -> favouriteTeam = $validatedData['favouriteTeam'];
+        $p1 -> email = $validatedData['email'];
+        $p1 -> save();
+
+        session()->flash('message', 'Profile was created.');
+        return redirect()->route('profiles.index');
     }
 
     

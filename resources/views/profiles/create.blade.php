@@ -7,13 +7,13 @@
         @csrf
         <p>First name: <input type="text" name="firstName"
             value="{{ old('firstName') }}"></p>
-        <p>Surame: <input type="text" name="surname"
+        <p>Surname: <input type="text" name="surname"
             value="{{ old('surname') }}"></p>
-        <p>Age: <input type="text" age="age"
+        <p>Age: <input type="text" name="age"
             value="{{ old('age') }}"></p>
-        <p>Favourite team: <input type="text" favouriteTeam="favouriteTeam"
+        <p>Favourite team: <input type="text" name="favouriteTeam"
             value="{{ old('favouriteTeam') }}"></p>
-        <p>Email: <input type="text" email="email"
+        <p>Email: <input type="text" name="email"
             value="{{ old('email') }}"></p>
         <input type="submit" value="Submit">
         <a href="{{ route('profiles.index' )}}">Cancel</a>
