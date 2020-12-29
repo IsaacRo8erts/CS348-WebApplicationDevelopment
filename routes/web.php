@@ -25,11 +25,20 @@ Route::get('profiles/create', 'App\Http\Controllers\ProfileController@create')->
 Route::post('profiles', 'App\Http\Controllers\ProfileController@store')->name('profiles.store');
 Route::get('profiles/{id}', 'App\Http\Controllers\ProfileController@show')->name('profiles.show');
 
+Route::get('users', 'App\Http\Controllers\UserController@index')->name('users.index');
+Route::get('users/create', 'App\Http\Controllers\UserController@create')->name('users.create');
+Route::post('users', 'App\Http\Controllers\UserController@store')->name('users.store');
+Route::get('users/{id}', 'App\Http\Controllers\UserController@show')->name('users.show');
+
 Route::get('posts', 'App\Http\Controllers\PostController@index')->name('posts.index');
 Route::get('posts/create', 'App\Http\Controllers\PostController@create')->name('posts.create');
 Route::post('posts', 'App\Http\Controllers\PostController@store')->name('posts.store');
 Route::get('posts/{id}', 'App\Http\Controllers\PostController@show')->name('posts.show');
 
+
 Route::get('/forum', function () {
     return "Post goes here";
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
