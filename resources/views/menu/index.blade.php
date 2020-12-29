@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Main Menu</h1>
-    <h1><a href="/profiles">Profiles</a></h1>
+    <h1><a href="/users">Users</a></h1>
     <h1><a href="/posts">Posts</a></h1>
 
     
