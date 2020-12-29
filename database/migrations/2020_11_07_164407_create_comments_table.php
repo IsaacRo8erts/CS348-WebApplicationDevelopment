@@ -21,7 +21,7 @@ class CreateCommentsTable extends Migration
 
             $table->foreignId('post_id')->constrained('posts')
                 ->cascadeOnUpdate()->cascadeOnDelete();
-            $table->foreignId('profile_id')->constrained('profiles')
+            $table->foreignId('user_id')->constrained('users')
                 ->cascadeOnDelete()->cascadeOnUpdate();
         });
     }

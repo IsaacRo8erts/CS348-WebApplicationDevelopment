@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Post;
 use App\Models\Comment;
 use App\Models\Profile;
+use App\Models\User;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -26,7 +27,7 @@ class PostFactory extends Factory
     {
         return [
             'title' => $this->faker->realText(30),
-            'profile_id' => Profile::all()->random()->id,
+            'user_id' => User::all()->random()->id,
             'content' => $this->faker->realText(50),
             //'comment' => Comment::inRandomOrder()->first()->comment,
         ];

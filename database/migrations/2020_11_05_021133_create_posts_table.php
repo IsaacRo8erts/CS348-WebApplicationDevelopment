@@ -19,7 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('content');
 
-            $table->foreignId('profile_id')->references('id')->on('profiles')
+            $table->foreignId('user_id')->references('id')->on('users')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }
