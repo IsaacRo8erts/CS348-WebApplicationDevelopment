@@ -4,7 +4,7 @@
 
 @section('content')
     <ul>
-        <li>Profile ID: {{ $post->profile_id }}</li>
+        <li>User ID: {{ $post->user_id }}</li>
         <li>Title: {{ $post->title }}</li>
         <li>Content: {{ $post->content }}</li>
     </ul>

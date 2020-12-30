@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Main Menu</title>
+    <title>Basketball Forum</title>
 </head>
 <body>
-    <h1>Main Menu</h1>
+    <h1>Basketball Forum</h1>
     
 </body>
 </html>
