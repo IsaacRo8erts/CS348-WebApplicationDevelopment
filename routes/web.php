@@ -15,7 +15,7 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('menu');
 });
 
 Route::get('menu', 'App\Http\Controllers\MenuController@index');

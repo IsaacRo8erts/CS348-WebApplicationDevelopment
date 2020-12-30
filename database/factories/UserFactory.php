@@ -24,13 +24,13 @@ class UserFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
+            'email' => $this->faker->unique()->safeEmail,
+            'email_verified_at' => now(), 
             'password' => $this->faker->password, // password
             'favouriteTeam' => $this->faker->randomElement(['Lakers','Warrios','Celtics',
             'Heat','Raptors','Rockets','Bulls', 'Clippers', '76ers', 'Knicks', 'Bucks',
             'Mavericks', 'Spurs', 'Thunder', 'Nets', 'Suns', 'Blazers', 'Nuggets', 'Cavs',
             'Jazz', 'Pelicans', 'Wolves', 'Pacers', 'Magic', 'Kings', 'Pistons']),
-            'email' => $this->faker->unique()->safeEmail,
-            'email_verified_at' => now(), 
             'remember_token' => Str::random(10),
         ];
     }
