@@ -9,4 +9,10 @@
         <li>Favourite Team: {{ $user->favouriteTeam }}</li>
         <li>Email Adress: {{ $user->email }}</li>
     </ul>
+
+    <form method="POST" action="{{ route('users.delete', ['id' => $user->id]) }}">
+        @csrf
+        @method('DELETE')
+        <button type="submit">Delete User</button>
+    </form>
 @endsection

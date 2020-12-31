@@ -29,6 +29,7 @@ Route::get('users', 'App\Http\Controllers\UserController@index')->name('users.in
 Route::get('users/create', 'App\Http\Controllers\UserController@create')->name('users.create');
 Route::post('users', 'App\Http\Controllers\UserController@store')->name('users.store');
 Route::get('users/{id}', 'App\Http\Controllers\UserController@show')->name('users.show');
+Route::delete('users/{id}', 'App\Http\Controllers\UserController@delete')->name('users.delete');
 
 Route::get('posts', 'App\Http\Controllers\PostController@index')->name('posts.index');
 Route::get('posts/create', 'App\Http\Controllers\PostController@create')->name('posts.create');

@@ -53,7 +53,6 @@ class UserController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|max:30',
             'password' => 'required|max:30',
-            'dob' => 'required',
             'favouriteTeam' => 'required|max:50',
             'email' => 'required|max:30',
         ]);
@@ -61,7 +60,6 @@ class UserController extends Controller
         $u1 = new User;
         $u1 -> name = $validatedData['name'];
         $u1 -> password = $validatedData['password'];
-        $u1 -> dob = $validatedData['dob'];
         $u1 -> favouriteTeam = $validatedData['favouriteTeam'];
         $u1 -> email = $validatedData['email'];
         $u1 -> save();
@@ -101,8 +99,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $user=User::findOrFail($id);
+        $user->delete();
+        return redirect()->route('users.index');
     }
+    
 }

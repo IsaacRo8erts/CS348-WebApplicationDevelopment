@@ -9,5 +9,5 @@
             <li><a href="{{ route('users.show', ['id' => $user->id]) }}">{{ $user->name }}</a></li>
         @endforeach
     </ul>
-    <a href="{{ route('register' )}}">Create User</a>
+    <button onclick="location.href='{{ route('register' )}}'">Create User</button>
 @endsection
