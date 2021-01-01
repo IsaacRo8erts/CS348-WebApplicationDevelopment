@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@include('layouts.style')
 
 @section('title', 'Create User')
 

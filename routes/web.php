@@ -31,12 +31,14 @@ Route::post('users', 'App\Http\Controllers\UserController@store')->name('users.s
 Route::get('users/{id}', 'App\Http\Controllers\UserController@show')->name('users.show');
 Route::delete('users/{id}', 'App\Http\Controllers\UserController@delete')->name('users.delete');
 
-Route::get('posts', 'App\Http\Controllers\PostController@index')->name('posts.index');
-Route::get('posts/create', 'App\Http\Controllers\PostController@create')->name('posts.create');
 Route::post('posts', 'App\Http\Controllers\PostController@store')->name('posts.store');
+Route::get('posts', 'App\Http\Controllers\PostController@index')->name('posts.index');
+Route::get('posts/create', 'App\Http\Controllers\PostController@create')->name('posts.create')->middleware('auth');
+Route::get('posts/{id}/edit', 'App\Http\Controllers\PostController@updateview')->name('posts.editview');
 Route::get('posts/{id}', 'App\Http\Controllers\PostController@show')->name('posts.show');
 
-Route::get('comments/create', 'App\Http\Controllers\CommentController@create')->name('comments.create');
+
+Route::get('comments/create', 'App\Http\Controllers\CommentController@create')->name('comments.create')->middleware('auth');
 Route::post('comments', 'App\Http\Controllers\CommentController@store')->name('comments.store');
 Route::get('comments/{id}', 'App\Http\Controllers\CommentController@show')->name('comments.show');
 

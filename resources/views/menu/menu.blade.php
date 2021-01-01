@@ -1,4 +1,5 @@
 @extends('home.app')
+@include('layouts.style')
 
 @section('title', 'Basketball Forum')
 

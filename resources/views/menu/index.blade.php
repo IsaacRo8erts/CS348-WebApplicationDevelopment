@@ -1,4 +1,5 @@
 @extends('layouts.home')
+@include('layouts.style')
 
 @section('title')
 <p class="text-calibri">Basketball Forum<img src="{{ URL::asset('images/nba.png') }}" width="200" height="50"></p>

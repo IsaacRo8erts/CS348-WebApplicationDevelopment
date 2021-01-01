@@ -27,7 +27,6 @@ class PostController extends Controller
             'user_id' => 'required|integer',
             'title' => 'required|max:255',
             'content' => 'required|max:255',
-
         ]);
 
         $post1 = new Post;
@@ -39,6 +38,33 @@ class PostController extends Controller
         session()->flash('message', 'Post was created.');
         return redirect()->route('posts.index');
         
+    }
+
+    public function updateview() 
+    {
+        //return view('posts.edit');
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Request $request)
+    {
+
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'content' => 'required|max:255',
+        ]);
+
+        $post = Post::find($request['post_id']);
+        $post->edit(['title' => $validatedData['title']]);
+        $post->edit(['content' => $validatedData['title']]);
+
+        session()->flash('message', 'Post was edited.');
+        return redirect()->route('posts.show', $post->id);
     }
 
     /**

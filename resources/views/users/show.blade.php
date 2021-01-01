@@ -1,6 +1,7 @@
 @extends('layouts.app')
+@include('layouts.style')
 
-@section('title', 'Profile Details')
+@section('title', 'User Details')
 
 @section('content')
     <ul>

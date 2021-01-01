@@ -31,4 +31,5 @@
     </ul>
 
     <button onclick="location.href='{{ route('comments.create' )}}'">Add Comment</button>
+    <button>Edit Post</button>
 @endsection

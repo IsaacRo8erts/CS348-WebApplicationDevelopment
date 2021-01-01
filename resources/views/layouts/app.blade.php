@@ -26,7 +26,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <p class="text-calibri">Basketball Forum<img src="{{ URL::asset('images/nba.png') }}" width="200" height="50"></p>
+                <p class="text-primary">Basketball Forum<img src="{{ URL::asset('images/nba.png') }}" width="200" height="50"></p>
                 </a>
                 @if (Auth::check())
                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -62,9 +62,10 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
+                            
                             @endif
                         @else
-                        
+                            You are logged in!
                         @endguest
                     </ul>
                 </div>

@@ -14,8 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
-                                
+                    {{  Auth::user()->name  }}
+
+                    {{ __('you are logged in!') }}
+                    <p></p>
+                    
+                    <p>Find you profile from the main menu</p>
+                    
                 </div>
             </div>
         </div>
