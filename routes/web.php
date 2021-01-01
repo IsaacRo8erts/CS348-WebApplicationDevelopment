@@ -36,6 +36,10 @@ Route::get('posts/create', 'App\Http\Controllers\PostController@create')->name('
 Route::post('posts', 'App\Http\Controllers\PostController@store')->name('posts.store');
 Route::get('posts/{id}', 'App\Http\Controllers\PostController@show')->name('posts.show');
 
+Route::get('comments/create', 'App\Http\Controllers\CommentController@create')->name('comments.create');
+Route::post('comments', 'App\Http\Controllers\CommentController@store')->name('comments.store');
+Route::get('comments/{id}', 'App\Http\Controllers\CommentController@show')->name('comments.show');
+
 
 Route::get('/forum', function () {
     return "Post goes here";

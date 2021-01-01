@@ -18,5 +18,5 @@
             Posted by: <a href="{{ route('users.show', ['id' => $user->id]) }}">{{ $user->name }} </a>
         @endforeach
     </ul>
-    <a href="{{ route('posts.create' )}}">Create Post</a>
+    <button onclick="location.href='{{ route('posts.create' )}}'">Create Post</button>
 @endsection
