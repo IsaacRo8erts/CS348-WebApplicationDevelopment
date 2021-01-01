@@ -42,7 +42,8 @@ class PostController extends Controller
 
     public function updateview() 
     {
-        //return view('posts.edit');
+        $posts = Post::all();
+        return view('posts.edit', ['posts' => $posts]);
     }
 
     /**
@@ -51,7 +52,7 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Request $request)
+    public function update(Request $request)
     {
 
         $validatedData = $request->validate([
@@ -60,8 +61,8 @@ class PostController extends Controller
         ]);
 
         $post = Post::find($request['post_id']);
-        $post->edit(['title' => $validatedData['title']]);
-        $post->edit(['content' => $validatedData['title']]);
+        $post->update(['title' => $validatedData['title']]);
+        $post->update(['content' => $validatedData['content']]);
 
         session()->flash('message', 'Post was edited.');
         return redirect()->route('posts.show', $post->id);

@@ -17,6 +17,11 @@
 
         <h1> {{ $post->title }}</h1>
         <p>{{ $post->content }}</p>
+
+        <button onclick="location.href='{{ route('posts.edit', ['id' => $post->id])}}'">Edit Post</button>
+        <button onclick="location.href='{{ route('comments.create' )}}'">Add Comment</button>
+
+        <p></p>
         <b>Comments:</b>
         <p></p>
         @foreach ($comments as $comment)
@@ -29,7 +34,5 @@
         <p></p>
         @endforeach
     </ul>
-
-    <button onclick="location.href='{{ route('comments.create' )}}'">Add Comment</button>
-    <button>Edit Post</button>
+    
 @endsection
