@@ -11,8 +11,8 @@
         document.getElementById("datetime").innerHTML = dt.toLocaleString();
     </script>
 
-    <center><p><h1><a href="/users">Users</a></h1></p>
-    <p><h1><a href="/posts">Posts</a></h1></p></center>
+    <p><h1><a href="/users">Users</a></h1></p>
+    <p><h1><a href="/posts">Posts</a></h1></p>
 @endsection
 
 

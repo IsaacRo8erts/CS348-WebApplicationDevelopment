@@ -23,6 +23,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    <div class="header">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -74,10 +75,11 @@
         </nav>
 
         <main class="py-4">
-            <div class="body">
+            
             @yield('content')
-            </div>
+           
         </main>
+    </div>
     </div>
 </body>
 </html>
