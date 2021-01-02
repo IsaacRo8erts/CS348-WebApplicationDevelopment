@@ -41,10 +41,12 @@
         <p></p>
     @endforeach
 
+    @if(Auth::id()==$user->id)
     <form method="POST" action="{{ route('users.delete', ['id' => $user->id]) }}">
         @csrf
         @method('DELETE')
         <button type="submit">Delete User</button>
     </form>
+    @endif
     </ul>
 @endsection

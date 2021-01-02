@@ -18,8 +18,13 @@
         <h1> {{ $post->title }}</h1>
         <p>{{ $post->content }}</p>
 
-        <button onclick="location.href='{{ route('posts.edit', ['id' => $post->id])}}'">Edit Post</button>
+        @if(Auth::id()==$post->user_id)
+            <button onclick="location.href='{{ route('posts.edit', ['id' => $post->id])}}'">Edit Post</button>
+        @endif
+        
+        @if(Auth::check())
         <button onclick="location.href='{{ route('comments.create' )}}'">Add Comment</button>
+        @endif
 
         <p></p>
         <b>Comments:</b>

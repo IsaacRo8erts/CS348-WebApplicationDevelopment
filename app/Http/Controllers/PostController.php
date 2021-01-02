@@ -40,10 +40,10 @@ class PostController extends Controller
         
     }
 
-    public function updateview() 
+    public function updateview($id) 
     {
-        $posts = Post::all();
-        return view('posts.edit', ['posts' => $posts]);
+        $post = Post::findOrFail($id);
+        return view('posts.edit', ['post' => $post]);
     }
 
     /**

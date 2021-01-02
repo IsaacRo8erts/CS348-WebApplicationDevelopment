@@ -32,11 +32,11 @@ Route::get('users/{id}', 'App\Http\Controllers\UserController@show')->name('user
 Route::delete('users/{id}', 'App\Http\Controllers\UserController@delete')->name('users.delete');
 
 Route::get('posts', 'App\Http\Controllers\PostController@index')->name('posts.index');
-Route::post('posts', 'App\Http\Controllers\PostController@store')->name('posts.store');
 Route::get('posts/create', 'App\Http\Controllers\PostController@create')->name('posts.create')->middleware('auth');
+Route::post('posts/store', 'App\Http\Controllers\PostController@store')->name('posts.store');
+Route::post('posts', 'App\Http\Controllers\PostController@update')->name('posts.update');
 Route::get('posts/{id}', 'App\Http\Controllers\PostController@show')->name('posts.show');
 Route::get('posts/{id}/edit', 'App\Http\Controllers\PostController@updateview')->name('posts.edit');
-Route::post('posts', 'App\Http\Controllers\PostController@update')->name('posts.update');
 
 
 Route::get('comments/create', 'App\Http\Controllers\CommentController@create')->name('comments.create')->middleware('auth');

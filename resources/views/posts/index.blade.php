@@ -7,6 +7,7 @@
 @section('title', 'Posts')
 
 @section('content')
+    <button onclick="location.href='{{ route('posts.create' )}}'">Create Post</button>
     <p>A list of the Basketball Forum posts:</p>
     <ul>
         @foreach ($posts as $post)
@@ -18,5 +19,5 @@
             <p></p>
         @endforeach
     </ul>
-    <button onclick="location.href='{{ route('posts.create' )}}'">Create Post</button>
+    
 @endsection

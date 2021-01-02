@@ -5,6 +5,8 @@
 @section('content')
     <form method="POST" action="{{ route('posts.update')}}">
         @csrf
+        <input type="hidden" name="post_id"
+            value="{{ $post -> id }}">
         <p> Title: <input type="text" name="title"
             value="{{ old('title') }}"></p>
         <p> Content: <input type="text" name="content"
