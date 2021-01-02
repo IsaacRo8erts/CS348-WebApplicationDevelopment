@@ -9,7 +9,6 @@ class PostController extends Controller
 {
     public function index() 
     {
-        //return view('menu.index')->with('menu', Menu::all());
 
         $posts = Post::all();
         return view('posts.index', ['posts' => $posts]);

@@ -1,11 +1,11 @@
 <style>
-.font {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
 
 .title {
   background: linear-gradient(to left, purple, gold);
+}
+
+.body {
+  font-family: Arial;
 }
 
 .header {

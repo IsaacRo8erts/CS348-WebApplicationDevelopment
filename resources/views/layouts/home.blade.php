@@ -4,6 +4,7 @@
 @section('title', 'Basketball Forum')
 
 @section('content')
+<div class = "body">
     <p>Date/Time: <span id="datetime"></span></p>
     <p id="datetime"></p>
     <script>
@@ -13,6 +14,7 @@
 
     <p><h1><a href="/users">Users</a></h1></p>
     <p><h1><a href="/posts">Posts</a></h1></p>
+</div>
 @endsection
 
 
